@@ -33,7 +33,7 @@ func (b *Block) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		Timestamp    int64    `json:"timestamp"`
 		Nonce        int      `json:"nonce"`
-		PreviousHash [32]byte   `json:"previous_hash"`
+		PreviousHash [32]byte `json:"previous_hash"`
 		Transactions []string `json:"transactions"`
 	}{
 		Timestamp:    b.timestamp,
